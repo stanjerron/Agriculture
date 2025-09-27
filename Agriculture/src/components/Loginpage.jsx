@@ -1,11 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import agriculture from "../Image/agriculture.png"; // Make sure the path is correct
 
+
 const LoginPage = () => {
   const navigate = useNavigate();
 
   const handleSignUpClick = () => {
     navigate("/Signup"); // make sure route path matches your App.js
+  };
+  
+  // Moving to Dashboard
+  const handleLoginClick = () => {
+    navigate("/Dashboard"); // make sure route path matches your App.js
   };
 
   return (
@@ -43,11 +49,16 @@ const LoginPage = () => {
           />
 
           <button
-            type="submit"
-            className="bg-green-500 hover:bg-green-600 transition-all duration-300 py-2 font-semibold shadow-lg"
-          >
-            Login
-          </button>
+  type="submit"
+  onClick={(e) => {
+    e.preventDefault(); // ← prevents page reload
+    handleLoginClick();  // ← navigate to dashboard
+  }}
+  className="bg-green-500 hover:bg-green-600 transition-all duration-300 py-2 font-semibold shadow-lg"
+>
+  Login
+</button>
+
         </form>
 
         {/* Links */}

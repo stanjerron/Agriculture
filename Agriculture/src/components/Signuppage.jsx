@@ -46,13 +46,16 @@ const Signuppage = () => {
             placeholder="Password"
             className="px-3 sm:px-4 py-2 rounded-lg bg-white/20 border border-black/50 text-white placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
           />
-
-          <button
-            type="submit"
-            className="bg-green-500 hover:bg-green-600 transition-all duration-300 rounded-lg py-2 font-semibold shadow-lg"
-          >
-            Sign Up
-          </button>
+ <button
+    type="submit"
+    onClick={(e) => {
+      e.preventDefault();       // prevent form reload
+      navigate("/Dashboard");   // go to dashboard
+    }}
+    className="bg-green-500 hover:bg-green-600 transition-all duration-300 rounded-lg py-2 font-semibold shadow-lg"
+  >
+    Sign Up
+  </button>
         </form>
 
         {/* Links */}
