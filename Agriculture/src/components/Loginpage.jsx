@@ -34,12 +34,12 @@ const LoginPage = () => {
           <input
             type="text"
             placeholder="Full Name"
-            className="px-3 sm:px-4 py-2 rounded-lg bg-white/20 border border-black/50 text-white placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+            className="px-3 sm:px-4 py-2 rounded-lg bg-white/20 border border-black/50 text-black placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
           />
           <input
             type="password"
             placeholder="Password"
-            className="px-3 sm:px-4 py-2 rounded-lg bg-white/20 border border-black/50 text-white placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+            className="px-3 sm:px-4 py-2 rounded-lg bg-white/20 border border-black/50 text-black placeholder-gray-700 focus:outline-none focus:ring-2 focus:ring-green-400 transition"
           />
 
           <button
