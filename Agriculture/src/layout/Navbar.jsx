@@ -6,14 +6,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="h-16 bg-white flex items-center justify-between px-4 md:px-6 relative ">
+    <div className="h-16 bg-white flex items-center justify-evenly px-4 md:px-6 relative ">
       {/* Left side: logo placeholder for mobile */}
-      <div className="flex items-center">
-        <span className="text-lg font-bold text-green-900 md:text-xl">AgriPortal</span>
+      <div className="">
+        <span className="text-lg font-bold text-green-900 md:text-xl ">AgriPortal</span>
       </div>
 
       {/* Right side */}
-      <div className="flex items-center space-x-4">
+      <div className="flex  items-center space-x-4 ">
         {/* Notification Icon */}
         <div className="relative cursor-pointer">
           <Bell size={22} className="text-gray-600" />

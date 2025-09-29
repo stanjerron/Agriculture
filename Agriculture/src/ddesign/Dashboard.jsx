@@ -1,22 +1,5 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Sun, Droplets, Wind } from "lucide-react"; // icons
-// import FieldCard from "../cards/FieldCard";
-// import field1 from "../image/field1.png";
-// import field2 from "../image/field2.png";
-// import field3 from "../image/field3.png";
-// import field4 from "../image/field4.png";
-// import field5 from "../image/field5.png";
-// import field6 from "../image/field6.png";
-// import field7 from "../image/field7.png";
-// import field8 from "../image/field8.png";
-// import field9 from "../image/field9.png";
-// import field10 from "../image/field10.png";
-// import field11 from "../image/field11.png";
-// import field12 from "../image/field12.png";
-// import field13 from "../image/field13.png";
-// import field14 from "../image/field14.png";
-
-
 const Dashboard = () => {
   const [dateTime, setDateTime] = useState(new Date());
 
@@ -28,28 +11,32 @@ const Dashboard = () => {
   }, []);
 
   const days = [
-    "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
   ];
   const months = [
-    "Jan","Feb","Mar","Apr","May","Jun",
-    "Jul","Aug","Sep","Oct","Nov","Dec"
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
-
   const day = days[dateTime.getDay()];
   const date = dateTime.getDate();
   const month = months[dateTime.getMonth()];
   const year = dateTime.getFullYear();
-
-// const Image = [field1, field2, field3, field4, field5, field6, field7, field8,
-//     field9,field10,field11, field12, field13, field14
-// ];
-
-
-// <FieldCard images={Image} />
-
-
-
-
   return (
     <div className="min-h-screen bg-white-50 flex">
       {/* Left space like sidebar */}
