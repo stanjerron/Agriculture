@@ -6,14 +6,19 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="h-16 bg-white flex items-center justify-between px-4 md:px-6 relative ">
-      {/* Left side: logo placeholder for mobile */}
-      <div className="">
-        <span className="text-lg font-bold text-green-900 md:text-xl uppercase ">Agri Portal</span>
+    <div className="h-16 w-full flex items-center justify-between px-4 md:px-6 relative">
+      {/* Left side: logo/portal name */}
+      <div
+        className="
+          text-lg font-bold text-green-900 md:text-xl uppercase
+          sm:pl-0 pl-3
+        "
+      >
+        Agri Portal
       </div>
 
       {/* Right side */}
-      <div className="flex  items-center space-x-4 ">
+      <div className="flex items-center space-x-4">
         {/* Notification Icon */}
         <div className="relative cursor-pointer">
           <Bell size={22} className="text-gray-600" />
@@ -42,8 +47,12 @@ export default function Navbar() {
       {open && (
         <div className="absolute top-16 right-4 md:right-6 w-56 md:w-64 bg-white shadow-lg rounded-lg p-4 z-50">
           <h3 className="font-semibold text-gray-800 truncate">Jerron</h3>
-          <p className="text-sm text-gray-500 truncate">Position: Greenhouse Manager</p>
-          <p className="text-sm text-gray-500 truncate">Address: 123 Farm Road</p>
+          <p className="text-sm text-gray-500 truncate">
+            Position: Greenhouse Manager
+          </p>
+          <p className="text-sm text-gray-500 truncate">
+            Address: 123 Farm Road
+          </p>
           <p className="text-sm text-gray-500 truncate">Location: Europe</p>
         </div>
       )}

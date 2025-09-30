@@ -7,7 +7,6 @@ import {
   Settings,
   LogOut,
   Menu,
-  X,
 } from "lucide-react";
 import logo from "../image/Logo.png";
 
@@ -25,32 +24,35 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Mobile Top Navbar with Toggle */}
-      <div className="md:hidden p-4  fixed top-16 left-0 z-10 h-16 w-15">
-        <button 
-        type="button"
-        onClick={() => setMobileOpen(!mobileOpen)}
-         className="text-black pb-2 rounded focus:outline-none"
-        >
-          {mobileOpen ? <X size={26} /> : <Menu size={26} />}
-        </button>
-      </div>
-      
+      {/* Navbar with only Menu button */}
+<div className="h-16 flex items-center justify-between px-4 md:px-6 relative">
+  {/* Mobile Menu Button */}
+  <button
+    type="button"
+    onClick={() => setMobileOpen(!mobileOpen)}
+    className="md:hidden text-green-900 focus:outline-none"
+  >
+    <Menu size={26} />
+  </button>
+</div>
+
+
       {/* Sidebar */}
       <div
-        className={`fixed top-32 left-0 h-full flex flex-col justify-between transition-all duration-300 ease-in-out
-          
-          ${open ? "w-50" : "w-15"} bg-[rgb(7,30,7)] 
-        fixed md:static z-10
-        ${mobileOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"} z-40`}
-      >
+  className={`fixed top-16 left-0 h-full flex flex-col justify-between transition-all duration-300 ease-in-out
+    ${open ? "w-50" : "w-15"} bg-[rgb(7,30,7)]
+    md:static
+    ${mobileOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"} 
+    z-40`}
+>
+
         {/* Logo + Title */}
         <div>
           <div
-            className="flex items-center cursor-pointer"
+            className="flex items-center cursor-pointer p-2"
             onClick={() => setOpen(!open)}
           >
-            <img src={logo} alt="logo" className="w-10 h-10 rounded-full" />
+            <img src={logo} alt="logo" className="w-10 h-10 top-1 rounded-full" />
             {open && (
               <h1 className="text-white ml-3 text-lg font-semibold">Farm</h1>
             )}
@@ -61,7 +63,9 @@ export default function Sidebar() {
             {menus.map((menu, i) => (
               <li
                 key={i}
-                className="flex items-center text-white gap-x-3 cursor-pointer hover:bg-green-600 p-2 rounded-md"
+                className="flex items-center text-white gap-x-3 cursor-pointer 
+                  hover:bg-white hover:text-green-800 hover:rounded-l-full 
+                  p-2 rounded-md transition-all duration-600"
               >
                 {menu.icon}
                 {open && <span className="text-sm">{menu.name}</span>}
@@ -69,12 +73,16 @@ export default function Sidebar() {
             ))}
           </ul>
         </div>
+      </div>
 
-        {/* Logout */}
-        <div className="flex items-center text-white gap-x-3 cursor-pointer hover:bg-green-600 p-2 rounded-md">
-          <LogOut size={22} />
-          {open && <span className="text-sm">Logout</span>}
-        </div>
+      {/* Logout Always Visible */}
+      <div
+        className="fixed bottom-5 left-5 flex items-center text-white gap-x-3 
+        cursor-pointer hover:bg-white hover:text-green-800 hover:rounded-l-full 
+        p-2 rounded-full transition-all duration-300 z-50"
+      >
+        <LogOut size={22} />
+        {open && <span className="text-sm">Logout</span>}
       </div>
     </>
   );
