@@ -26,11 +26,11 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile Top Navbar with Toggle */}
-      <div className="md:hidden p-4 bg-[rgb(7,30,7)] text-white fixed top-0 left-0 z-10 h-16 w-15">
+      <div className="md:hidden p-4  fixed top-16 left-0 z-10 h-16 w-15">
         <button 
         type="button"
         onClick={() => setMobileOpen(!mobileOpen)}
-         className="text-white pb-2 rounded focus:outline-none"
+         className="text-black pb-2 rounded focus:outline-none"
         >
           {mobileOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
@@ -38,7 +38,7 @@ export default function Sidebar() {
       
       {/* Sidebar */}
       <div
-        className={`fixed top-16 left-0 h-full flex flex-col justify-between transition-all duration-300 ease-in-out
+        className={`fixed top-32 left-0 h-full flex flex-col justify-between transition-all duration-300 ease-in-out
           
           ${open ? "w-50" : "w-15"} bg-[rgb(7,30,7)] 
         fixed md:static z-10

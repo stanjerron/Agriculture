@@ -12,15 +12,8 @@ const App = () => {
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/Signup" element={<Signuppage/>} />
         {/* Dashboard page wrapped inside Layout */}
-        <Route path="/dashboard" element={
-            <Layout>
-              <Dashboard />
-            </Layout>
-          }
-        />
-
-      
-      </Routes>
+        <Route path="/dashboard" element={<Layout> <Dashboard/> </Layout>}/>
+     </Routes>
     </Router>
   )
 }

@@ -6,10 +6,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="h-16 bg-white flex items-center justify-evenly px-4 md:px-6 relative ">
+    <div className="h-16 bg-white flex items-center justify-between px-4 md:px-6 relative ">
       {/* Left side: logo placeholder for mobile */}
       <div className="">
-        <span className="text-lg font-bold text-green-900 md:text-xl ">AgriPortal</span>
+        <span className="text-lg font-bold text-green-900 md:text-xl uppercase ">Agri Portal</span>
       </div>
 
       {/* Right side */}
