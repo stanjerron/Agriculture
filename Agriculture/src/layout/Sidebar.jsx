@@ -77,9 +77,9 @@ export default function Sidebar() {
 
       {/* Logout Always Visible */}
       <div
-        className="fixed bottom-5 left-5 flex items-center text-white gap-x-3 
+        className="fixed bottom-5 left-1flex items-center text-white gap-x-3 
         cursor-pointer hover:bg-white hover:text-green-800 hover:rounded-l-full 
-        p-2 rounded-full transition-all duration-300 z-50"
+        p-2 rounded-full transition-all duration-300 z-50 lg:text-black md:text-white"
       >
         <LogOut size={22} />
         {open && <span className="text-sm">Logout</span>}
