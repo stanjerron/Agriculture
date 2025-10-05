@@ -1,6 +1,7 @@
 import Sunnycard from "../cards/Sunnycard";
 import FieldCard from "../cards/FieldCard";
 import Sensorcard from "../cards/Sensorcard";
+import Summarycard from "../cards/Summarycard";
 const Dashboard = () => {
   return (
     <div className="rounded-2xl shadow-2xl min-h-screen p-2">
@@ -8,6 +9,7 @@ const Dashboard = () => {
         <Sunnycard />
         <FieldCard />
         <Sensorcard />
+        <Summarycard/>
       </div>
     </div>
   );
