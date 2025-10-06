@@ -3,6 +3,7 @@ import FieldCard from "../cards/FieldCard";
 import Sensorcard from "../cards/Sensorcard";
 import Summarycard from "../cards/Summarycard";
 import GraphDashboard from "../cards/GraphDashboard";
+import AlertBox from "../cards/Alertbox";
 const Dashboard = () => {
   return (
     <div className="rounded-2xl shadow-2xl min-h-screen p-2">
@@ -12,6 +13,8 @@ const Dashboard = () => {
         <Sensorcard />
         <Summarycard/>
         <GraphDashboard/>
+        <AlertBox/>
+        
       </div>
     </div>
   );
