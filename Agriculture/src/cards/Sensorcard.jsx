@@ -26,7 +26,7 @@ export default function SensorDashboard() {
   const [selectedField, setSelectedField] = useState(fieldsData[0]);
 
   return (
-    <div className="p-2 sm:p-6 lg:p-8 max-w-lg mx-auto bg-gray-200 rounded-2xl">
+    <div className="p-2 sm:p-6 lg:p-8 max-w-5xl mt-5  mx-auto bg-gray-200 rounded-2xl">
       {/* Dropdown */}
       <select
         className="w-full mb-6 p-1 border border-white bg-white rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 transition duration-200"
@@ -45,7 +45,7 @@ export default function SensorDashboard() {
       </select>
 
       {/* Sensor Status Card */}
-      <div className="bg-white shadow-xl rounded-3xl p-6 sm:p-8 transform hover:scale-105 transition duration-300">
+      <div className="bg-white shadow-xl rounded-3xl p-6 sm:p-8 transform hover:scale-105  transition duration-300">
         <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-6 text-center">
           {selectedField.name} – Sensors
         </h2>

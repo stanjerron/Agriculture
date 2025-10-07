@@ -72,17 +72,17 @@ const ChartCard = ({ title, data, defaultPos }) => {
       default={{
         x: defaultPos.x,
         y: defaultPos.y,
-        width: 320,
+        width: 350,
         height: 260,
       }}
       minWidth={250}
-      minHeight={220}
+      minHeight={250}
       bounds="parent"
-      className="bg-white rounded-2xl shadow-lg p-4 flex flex-col justify-center items-center hover:shadow-xl transition-all duration-200"
+      className="bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-center items-center hover:shadow-xl transition-all duration-200"
     >
       <h3 className="text-lg font-semibold mb-2">{title}</h3>
       {renderExtraInfo()}
-      <ResponsiveContainer width="100%" height="80%">
+      <ResponsiveContainer width="100%" height="70%">
         <PieChart>
           <Pie
             data={data}
@@ -110,13 +110,13 @@ export default function GraphDashboard() {
   const selectedData = dataByField[selectedField];
 
   return (
-    <div className="p-4 w-full min-h-screen bg-gray-50">
-      <div className="mb-4 flex flex-wrap justify-between items-center">
+    <div className="p-8 max-w-5xl mx-auto mt-10 rounded-2xl shadow-2xl  bg-gray-200">
+      <div className="mb-4 flex  flex-wrap justify-between items-center">
         <h1 className="text-2xl font-bold text-gray-700">Field Data Overview</h1>
         <select
           value={selectedField}
           onChange={(e) => setSelectedField(e.target.value)}
-          className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="border bg-white rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
         >
           {fields.map((f) => (
             <option key={f} value={f}>
@@ -127,11 +127,11 @@ export default function GraphDashboard() {
       </div>
 
       {/* Draggable chart area */}
-      <div className="relative w-full h-[85vh] bg-white rounded-xl p-4 shadow-inner overflow-auto">
+      <div className="relative w-full h-[85vh] border-2 bg-gray-50 rounded-xl p-6  shadow-inner overflow-auto">
         <ChartCard title="Soil Moisture Sensor" data={selectedData.soilMoisture} defaultPos={positions[0]} />
         <ChartCard title="NPK Sensor" data={selectedData.npk} defaultPos={positions[1]} />
-        <ChartCard title="Active Sensors" data={selectedData.activeSensors} defaultPos={positions[2]} />
-        <ChartCard title="Farmers (Active / Inactive)" data={selectedData.farmers} defaultPos={positions[3]} />
+        <ChartCard title="Active Sensors" data={selectedData.activeSensors} defaultPos={positions[2]}/>
+        <ChartCard title="Farmers (Active / Inactive)" data={selectedData.farmers} defaultPos={positions[3]}  />
         <ChartCard title="Temperature" data={selectedData.temperature} defaultPos={positions[4]} />
         <ChartCard title="Humidity" data={selectedData.humidity} defaultPos={positions[5]} />
       </div>

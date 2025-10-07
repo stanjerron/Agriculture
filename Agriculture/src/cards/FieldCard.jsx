@@ -44,9 +44,9 @@ const FieldCard = () => {
   }, []);
 
   return (
-   <div className="flex justify-center font-sans pt-5">
+   <div className="flex justify-center font-sans pt-5 px-5">
   <div className="max-w-5xl w-full p-8 shadow-2xl rounded-2xl bg-gray-200 ">
-    <div className="w-full h-80 overflow-hidden rounded-xl mb-4"> 
+    <div className="w-full h-50 overflow-hidden rounded-xl mb-4"> 
       <img
         src={images[index]}
         alt={`Field ${index + 1}`}

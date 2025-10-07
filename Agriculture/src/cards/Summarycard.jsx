@@ -44,7 +44,7 @@ export default function Summarycard() {
   }, []);
 
   return (
-    <div className="w-full md:w-[45%] max-w-xl bg-white rounded-xl shadow-sm p-4 mt-4">
+    <div className=" max-w-5xl mx-auto  p-8  bg-gray-200 rounded-2xl shadow-2xl  mt-4">
       {/* Title */}
       <h2 className="text-lg font-semibold text-green-900 mb-2">
         Sensor Summary

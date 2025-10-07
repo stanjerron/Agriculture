@@ -18,9 +18,9 @@ const Sunnycard = () => {
   const year = dateTime.getFullYear();
 return(
    <>
-    <div className="bg-white-50 flex justify-center">
+    <div className="bg-white-50  flex justify-center">
       {/* Left space like sidebar */}
-      <div className="p-6 max-w-5xl mx-auto b-6 md:w-[500px] lg:w-[600px]">
+      <div className="p-6 max-w-5xl mx-auto b-6  md:w-[500px] lg:w-[600px]">
         <div className="bg-gray-200 rounded-2xl shadow-xl p-6">
           {/* Top: Weather + Day */}
           <div className="flex items-center justify-between flex-wrap">

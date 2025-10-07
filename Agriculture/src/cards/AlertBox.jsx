@@ -34,7 +34,7 @@ export default function AlertBox() {
     <div
       className="
         fixed bottom-4 right-4 z-40 
-        left-0 md:left-[260px] 
+        left-0  md:left-[260px]
         mx-4 md:mx-0 
         bg-gray-900/90 backdrop-blur-lg 
         border border-gray-700 shadow-xl text-white 
